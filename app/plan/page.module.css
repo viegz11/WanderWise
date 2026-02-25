@@ -1,0 +1,310 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px var(--space-lg) 3rem;
+}
+
+.formContainer {
+    max-width: 620px;
+    width: 100%;
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    position: relative;
+}
+
+/* Progress */
+.progress {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-full);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+}
+
+.progressBar {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    transition: width var(--transition-slow);
+}
+
+.stepIndicator {
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Step Content */
+.stepContent {
+    animation: fadeInUp 0.4s ease-out;
+    text-align: center;
+}
+
+.stepIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.stepContent h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stepContent p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Input */
+.inputGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 0.5rem 1rem;
+    max-width: 350px;
+    margin: 0 auto 1.5rem;
+    transition: border-color var(--transition-fast);
+}
+
+.inputGroup:focus-within {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.inputPrefix,
+.inputSuffix {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.input {
+    flex: 1;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.75rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.input::placeholder {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* Quick Picks */
+.quickPicks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.quickPick {
+    padding: 8px 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.quickPick:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.3);
+    color: var(--text-primary);
+}
+
+.quickPick.selected {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary-light);
+}
+
+/* Interests */
+.interestGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.interestChip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.interestChip:hover {
+    background: rgba(99, 102, 241, 0.08);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.interestChip.selected {
+    background: rgba(99, 102, 241, 0.12);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary-light);
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.1);
+}
+
+.chipIcon {
+    font-size: 1.2rem;
+}
+
+/* Error */
+.error {
+    text-align: center;
+    padding: 12px 16px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-md);
+    color: #fca5a5;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+/* Preview */
+.preview {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.previewTitle {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.previewItems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.previewChip {
+    padding: 4px 12px;
+    background: rgba(99, 102, 241, 0.08);
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Loading Page */
+.loadingPage {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.loadingContent {
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.loadingSpinner {
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--border-subtle);
+    border-top-color: var(--accent-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 2rem;
+}
+
+.loadingContent h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.loadingContent>p {
+    color: var(--text-secondary);
+    max-width: 400px;
+    margin: 0 auto 2rem;
+}
+
+.loadingSteps {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.loadingStep {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.loadingStep.active {
+    color: var(--text-secondary);
+}
+
+.loadingDot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .formContainer {
+        padding: 1.5rem;
+    }
+
+    .interestGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stepContent h2 {
+        font-size: 1.3rem;
+    }
+}
