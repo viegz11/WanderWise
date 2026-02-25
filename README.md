@@ -3,7 +3,6 @@
 A full-stack Next.js web app that generates **AI-powered, budget-optimized travel itineraries** for students. Plan smarter, spend less, explore more.
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
-![Gemini AI](https://img.shields.io/badge/Gemini-AI-blue?logo=google)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ## ✨ Features
@@ -30,17 +29,6 @@ git clone https://github.com/viegz11/WanderWise.git
 cd WanderWise
 npm install
 ```
-
-### Environment Setup
-
-Create a `.env.local` file:
-
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-
-> Get a free API key at [Google AI Studio](https://aistudio.google.com/apikey).
-> The app works in **demo mode** without a key.
 
 ### Run Development Server
 
