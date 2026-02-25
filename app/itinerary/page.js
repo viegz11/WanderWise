@@ -241,7 +241,7 @@ export default function ItineraryPage() {
                         <h3>🗺️ Route Map</h3>
                         <div className={styles.mapContainer}>
                             <iframe
-                                src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&origin=${encodeURIComponent(tripInput?.startLocation || 'India')}&destination=${encodeURIComponent(currentDay.location || 'India')}&mode=transit`}
+                                src={`https://www.google.com/maps/embed/v1/directions?key=YourAPI&origin=${encodeURIComponent(tripInput?.startLocation || 'India')}&destination=${encodeURIComponent(currentDay.location || 'India')}&mode=transit`}
                                 width="100%"
                                 height="250"
                                 style={{ border: 0, borderRadius: 'var(--radius-md)' }}
